@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 <title>Insert title here</title>
 </head>
 <body>
-	<h2>Olá, eu sou o dolinho, seu amiguinho!</h2>
+	<h1>Eventos</h1>
+	<h3><a href="/cadastrarEvento">Cadastrar Evento</a></h3>
+	
+	<div th:each="evento : ${eventos}">
+		<div class="row">
+			<p><span th:text="${evento.nome}"></span></p>
+			<p><span th:text="${evento.local}"></span></p>
+			<p><span th:text="${evento.data}"></span></p>
+			<p><span th:text="${evento.horario}"></span></p>
+		</div>
+		
+	
+	
+	</div>
+	
+	
+	
 </body>
 </html>
