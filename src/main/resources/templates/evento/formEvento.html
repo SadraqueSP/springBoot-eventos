@@ -4,18 +4,60 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 <title>Cadastar</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
 </head>
 <body>
-	
-	<h2>Cadastro de eventos</h2>
-	<form method="post">
-		<label>Nome:</label><input type="text" value="" name="nome" />
-		<label>Local:</label><input type="text" value="" name="local" />
-		<label>Data:</label><input type="date" value="" name="data" />
-		<label>Hora:</label><input type="time" value="" name="horario" />
-		<button type="submit" value="SALVAR" >SALVAR</button>
+	<!-- 
+	<div class="container">
+		<h2>Cadastro de eventos</h2>
+		<form method="post">
+			<div class="form-group row">
+				<label>Nome:</label><input type="text" value="" name="nome" />
+			</div>
+			<div class="form-group row">
+				<label>Local:</label><input type="text" value="" name="local" />
+			</div>
+			<div class="form-group row">
+				<label>Data:</label><input type="date" value="" name="data" />
+			</div>
+			<div class="form-group row">
+				<label>Hora:</label><input type="time" value="" name="horario" />
+			</div>
+			<button type="submit" value="SALVAR" class="btn btn-primary mb-2">SALVAR</button>
+		</form>
+	</div>
+ -->
+
+
+	<form method="post" class="container">
+		<div class="form-group">
+			<label for="nome">NOME</label> <input type="text"
+				class="form-control" id="nome" placeholder="nome"  value="" name="nome"/>
+		</div>
+		<div class="form-group">
+			<label for="local">LOCAL</label> <input type="text"
+				class="form-control" id="local" placeholder="local"  value="" name="local"/>
+		</div>
+		<div class="form-row">
+			<div class="form-group col-md-2">
+				<label for="date">DATA</label> <input type="date"
+					class="form-control" id="date"  value="" name="data" />
+			</div>
+			<div class="form-group col-md-4">
+				<div class="form-group col-md-6">
+					<label for="hora">HORA</label> <input type="hora"
+						class="form-control" id="hora" value="" name="horario"/>
+				</div>
+			</div>
+		</div>
 		
+		<button type="submit" class="btn btn-primary">SALVAR</button>
 	</form>
 
+	<h3  class="container"><a href="/">EVENTOS</a></h3>
+
+	<script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

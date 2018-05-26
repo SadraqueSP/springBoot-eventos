@@ -6,9 +6,4 @@ import br.com.ssp.eventos.model.EventoModel;
 
 public interface EventoRepository extends CrudRepository<EventoModel, String> {
 
-	
-	
-	
-	
-	
 }

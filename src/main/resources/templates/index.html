@@ -5,22 +5,38 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 <title>Insert title here</title>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
 </head>
-<body>
+<body class="container">
 	<h1>Eventos</h1>
 	<h3><a href="/cadastrarEvento">Cadastrar Evento</a></h3>
 	
-	<div th:each="evento : ${eventos}">
-		<div class="row">
-			<p><span th:text="${evento.nome}"></span></p>
-			<p><span th:text="${evento.local}"></span></p>
-			<p><span th:text="${evento.data}"></span></p>
-			<p><span th:text="${evento.horario}"></span></p>
-		</div>
-		
+
+	
+		<table class="table container">
+			<thead>
+			    <tr>
+			      <th scope="col">NOME</th>
+			      <th scope="col">LOCAL</th>
+			      <th scope="col">DATA</th>
+			      <th scope="col">HORÁRIO</th>
+			    </tr>
+		  	</thead>
+			<tbody>
+				
+				<tr th:each="evento : ${eventos}">
+					<td><p><span th:text="${evento.nome}"></span></p></td>
+					<td><p><span th:text="${evento.local}"></span></p></td>
+					<td><p><span th:text="${evento.data}"></span></p></td>
+					<td><p><span th:text="${evento.horario}"></span></p></td>
+				</tr>
+				
+			</tbody>
+		</table>
 	
 	
-	</div>
+	
+	
 	
 	
 	
