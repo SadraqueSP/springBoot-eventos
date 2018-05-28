@@ -8,11 +8,11 @@
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
 </head>
 <body class="container">
-	<h1>Eventos</h1>
-	<h3><a href="/cadastrarEvento">Cadastrar Evento</a></h3>
+	<h1>Detalhes do Evento</h1>
+	<h3><a href="/">Eventos</a></h3>
 	
 
-	
+
 		<table class="table container">
 			<thead>
 			    <tr>
@@ -23,18 +23,14 @@
 			    </tr>
 		  	</thead>
 			<tbody>
-				<!-- mvc é padrão do tymeleaf, EC são as iniciais do controller, detalhesEvento é o nome do método, evento é o nome passado pro controller. -->
-				<tr th:each="evento : ${eventos}">
-					<td><p><a th:href="${(#mvc.url('EC#detalhesEvento').arg(0,evento.id)).build()}"><span th:text="${evento.nome}"></span></a></p></td>
+				<tr th:each="evento : ${evento}">
+					<td><p><span th:text="${evento.nome}"></span></p></td>
 					<td><p><span th:text="${evento.local}"></span></p></td>
 					<td><p><span th:text="${evento.data}"></span></p></td>
 					<td><p><span th:text="${evento.horario}"></span></p></td>
 				</tr>
-				
 			</tbody>
 		</table>
-	
-	
 	
 	
 	
