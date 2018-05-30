@@ -1,15 +1,17 @@
 package br.com.ssp.eventos.model;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 
 @Entity
-public class EventoModel implements Serializable{
+public class Evento implements Serializable{
 	private static final long serialVersionUID =1;
 	
 	@Id
@@ -20,7 +22,8 @@ public class EventoModel implements Serializable{
 	private String data;
 	private String horario;
 	
-	
+	@OneToMany
+	private List<Convidado> convidados; 
 	
 	
 	

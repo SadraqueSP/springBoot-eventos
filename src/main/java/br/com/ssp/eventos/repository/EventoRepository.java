@@ -2,11 +2,11 @@ package br.com.ssp.eventos.repository;
 
 import org.springframework.data.repository.CrudRepository;
 
-import br.com.ssp.eventos.model.EventoModel;
+import br.com.ssp.eventos.model.Evento;
 
-public interface EventoRepository extends CrudRepository<EventoModel, String> {
+public interface EventoRepository extends CrudRepository<Evento, String> {
 
 	
-	EventoModel findById(long id);
+	Evento findById(long id);
 	
 }

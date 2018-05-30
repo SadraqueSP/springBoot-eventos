@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+      	xmlns:th="http://www.thymeleaf.org"
+		xmlns:layout="http//www.ultraq.net.nz/thymeleaf/layout"
+		layout:decorate="~{layout/layout-padrao}">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Insert title here</title>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
 </head>
-<body class="container">
-	<h1>Detalhes do Evento</h1>
-	<h3><a href="/">Eventos</a></h3>
+<body >
+		<div class="fixed-top">
+			<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+		 		<a href="/" class="navbar-brand">HOME</a>
+		 		<a href="/cadastrarEvento" class="navbar-brand">CADASTRAR</a>
+			</nav>
+		</div>
 	
+	<div id="body" class="container">
 
+
+
+	<h1>Detalhes do Evento</h1>
+	
 
 		<table class="table container">
 			<thead>
@@ -31,10 +42,42 @@
 				</tr>
 			</tbody>
 		</table>
+		
+		<br/><br/><hr/>
+		<h2>Cadastrar convidado</h2>
+		<form class="form" method="post">
+			<div class="form-group">
+				<label for="textNome" class="control-label">Nome</label> <input
+					id="textNome" class="form-control" placeholder="Digite o nome do convidado..."
+					type="text" name="nome" value=""/>
+			</div>
+			<div class="form-group">
+				<label for="rg" class="control-label">RG</label> <input
+					id="rg" class="form-control"
+					placeholder="Digite o RG do convidado..." type="text" name="rg" value=""/>
+					
+					<br/><button type="submit" class="btn btn-primary">Adicionar convidado</button>
+			</div>
+		</form>	
+		
+		
+		<table class="table container">
+			<thead>
+			    <tr>
+			      <th scope="col">NOME</th>
+			      <th scope="col">RG</th>
+			    </tr>
+		  	</thead>
+			<tbody>
+				<tr th:each="convidado : ${convidados}">
+					<td><p><span th:text="${convidado.nome}"></span></p></td>
+					<td><p><span th:text="${convidado.rg}"></span></p></td>
+				</tr>
+			</tbody>
+		</table>
 	
 	
 	
-	
-	
+	</div>
 </body>
 </html>

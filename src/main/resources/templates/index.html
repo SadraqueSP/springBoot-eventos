@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org"
+		xmlns:layout="http//www.ultraq.net.nz/thymeleaf/layout"
+		layout:decorate="~{layout/layout-padrao}">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Insert title here</title>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
 </head>
-<body class="container">
-	<h1>Eventos</h1>
-	<h3><a href="/cadastrarEvento">Cadastrar Evento</a></h3>
+<body >
+		<div class="fixed-top">
+			<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+		 		<a href="/" class="navbar-brand">EVENTOS</a>
+		 		<a href="/cadastrarEvento" class="navbar-brand">CADASTRAR</a>
+			</nav>
+		</div>
 	
+	<div id="body" class="container">
+	
+	
+
+
+	<h1>Eventos</h1>
 
 	
 		<table class="table container">
@@ -39,6 +51,6 @@
 	
 	
 	
-	
+	</div>
 </body>
 </html>
