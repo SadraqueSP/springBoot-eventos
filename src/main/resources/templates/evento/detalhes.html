@@ -13,7 +13,7 @@
 		<div class="fixed-top">
 			<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
 		 		<a href="/" class="navbar-brand">HOME</a>
-		 		<a href="/cadastrarEvento" class="navbar-brand">CADASTRAR</a>
+		 		<a href="/cadastrarEvento" class="navbar-brand">CADASTRAR EVENTO</a>
 			</nav>
 		</div>
 	
@@ -45,6 +45,8 @@
 		
 		<br/><br/><hr/>
 		<h2>Cadastrar convidado</h2>
+		
+		<th:block th:include="mensagemValidacao"></th:block>
 		<form class="form" method="post">
 			<div class="form-group">
 				<label for="textNome" class="control-label">Nome</label> <input
