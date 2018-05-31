@@ -68,12 +68,14 @@
 			    <tr>
 			      <th scope="col">NOME</th>
 			      <th scope="col">RG</th>
+			      <th>EXCLUIR</th>
 			    </tr>
 		  	</thead>
 			<tbody>
 				<tr th:each="convidado : ${convidados}">
 					<td><p><span th:text="${convidado.nome}"></span></p></td>
 					<td><p><span th:text="${convidado.rg}"></span></p></td>
+					<td><p><a th:href="${(#mvc.url('EC#deletarConvidado').arg(0,convidado.rg)).build()}">Excluir</a></p></td>
 				</tr>
 			</tbody>
 		</table>

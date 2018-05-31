@@ -1,4 +1,4 @@
 # springBoot-eventos
 
 
-Configuração de banco de dados encontra no arquivo: application.properties
+Configuração de banco de dados encontra-se no arquivo: application.properties

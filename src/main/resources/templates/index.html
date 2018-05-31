@@ -23,7 +23,7 @@
 
 	<h1>Eventos</h1>
 
-	
+		<th:block th:include="mensagemValidacao"></th:block>
 		<table class="table container">
 			<thead>
 			    <tr>
@@ -31,6 +31,7 @@
 			      <th scope="col">LOCAL</th>
 			      <th scope="col">DATA</th>
 			      <th scope="col">HORÁRIO</th>
+			      <th scope ="col">EXCLUIR</th>
 			    </tr>
 		  	</thead>
 			<tbody>
@@ -40,6 +41,7 @@
 					<td><p><span th:text="${evento.local}"></span></p></td>
 					<td><p><span th:text="${evento.data}"></span></p></td>
 					<td><p><span th:text="${evento.horario}"></span></p></td>
+					<td><p><a th:href="${(#mvc.url('EC#deletarEvento').arg(0,evento.id)).build()}">Excluir</a></p></td>
 				</tr>
 				
 			</tbody>
